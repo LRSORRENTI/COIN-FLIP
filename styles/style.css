@@ -1,20 +1,45 @@
-img {
-  max-width: 20%;
-  height: auto;
-  border-radius: 120%;
-}
-
 body {
-  color: blue;
+  background-color: rgb(188, 125, 146);
 }
 
 #heads {
   opacity: 0.3;
+  max-width: 25%;
+  max-height: 0%;
+  border-radius: 60%;
 }
 #VS {
+  font-size: 3rem;
+  margin-left: 7%;
 }
 #tails {
   opacity: 0.3;
+  max-width: 40%;
+  max-height: 40%;
+  border-radius: 110%;
 }
-opaque-images {
+.opaque-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#quest {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  padding: 20px;
 }
