@@ -3,6 +3,18 @@ img {
   height: auto;
   border-radius: 120%;
 }
+
+body {
+  color: blue;
+}
+
+#heads {
+  opacity: 0.3;
+}
+#VS {
+}
+#tails {
+  opacity: 0.3;
+}
 opaque-images {
-  max-width: ;
 }
