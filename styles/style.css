@@ -105,9 +105,9 @@ h1 {
 
 .btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
-  border: 2px solid blue;
+  border: 2px solid purple;
 }
 
 /* .btn-container button {
@@ -134,9 +134,28 @@ h1 {
 } */
 .btnAll {
   padding: 20px;
+  margin-left: 40px;
 }
 .btn3 {
   padding: 20px;
+  margin-right: 40px;
+}
+
+@media only screen and (min-width: 120px) and (max-width: 768px) {
+  .btnAll {
+    font-size: 18px;
+    color: #7df9ff;
+    /* margin-top: -20px; */
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .container-gallery .vertical-buttons {
+    display: flex;
+    align-items: center;
+    /* display: block; */
+  }
 }
 #btn-2 {
   padding: 20px;
