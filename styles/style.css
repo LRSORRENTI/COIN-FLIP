@@ -31,11 +31,13 @@ h1 {
   background-image: url("../imgs/Quarter-Heads.png");
   background-size: cover;
   background-origin: content-box;
+  z-index: 100;
 }
 .side-b {
   background-image: url("../imgs/quarter-us-dollar-isolated-white-background-money-coin-side-eagle-80301214cropped-modified.png");
   background-size: cover;
   background-origin: content-box;
+  -webkit-transform: rotateY(-180deg);
 }
 
 #coin {
@@ -46,12 +48,12 @@ h1 {
   position: absolute;
   -webkit-backface-visibility: hidden;
 }
-.side-a {
+/* .side-a {
   z-index: 100;
 }
 .side-b {
   -webkit-transform: rotateY(-180deg);
-}
+} */
 
 #coin.heads {
   -webkit-animation: flipHeads 3s ease-out forwards;
@@ -89,4 +91,63 @@ h1 {
     -moz-transform: rotateY(1980deg);
     transform: rotateY(1980deg);
   }
+}
+#quest {
+  display: flex;
+  justify-content: center;
+}
+#renderHere {
+  /* color: transparent; */
+  border: 1px solid red;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border: 2px solid blue;
+}
+
+/* .btn-container button {
+  margin: 20px;
+  font-family: "Cedarville Cursive";
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  background-color: #d3ddce;
+  color: black;
+  padding: 20px;
+  border-radius: 9%;
+  border: 1px solid blue;
+} */
+/* .btn {
+  display: flex;
+  justify-content: center;
+  background-color: #d3ddce;
+  color: black;
+  padding: 20px;
+  border-radius: 9%;
+} */
+.btnAll {
+  padding: 20px;
+}
+.btn3 {
+  padding: 20px;
+}
+#btn-2 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.container2 {
+  border: 2px solid green;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }

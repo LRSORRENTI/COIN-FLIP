@@ -1,5 +1,5 @@
 
-
+let text = document.getElementById("text")
 let rand = Math.round(Math.random() * 1)
 //console.log(rand)
 let flipped = ''
@@ -36,14 +36,20 @@ let renderedHtml = document.createElement('p');
 // newly rendered HTML
 
 
-let finalRender = document.getElementById('renderHere')
-
+// let finalRender = document.getElementById('renderHere')
+let finalRender = document.getElementById('renderHere').innerHTML
+function replyOne() {
+  // document.getElementById("comment_content").value =
+  //   document.getElementById("username");
+  document.getElementById("comment_content").value =
+    document.getElementById("username").innerHTML;
+}
 
 
 // 3. INSERT THE NEW HTML ELEMENT INTO THE PARENT 
 // ELEMENT CONTENT
 
-finalRender.append(`${renderedHtml},${flipped}`)
+// finalRender.append(`${renderedHtml},${flipped}`)
 
 jQuery(document).ready(function($){
 
@@ -54,10 +60,12 @@ jQuery(document).ready(function($){
         if(flipResult <= 0.5){
           $('#coin').addClass('heads');
           console.log('it is head');
+          text.innerHTML = "itzzz heads"
         }
         else{
           $('#coin').addClass('tails');
           console.log('it is tails');
+          text.innerHTML = "itzzz tails"
         }
       }, 100);
     });
