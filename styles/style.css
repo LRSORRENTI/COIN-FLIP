@@ -170,3 +170,10 @@ Flicker button:
   box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
 }
+
+.footerText {
+  color: var(--glow-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
