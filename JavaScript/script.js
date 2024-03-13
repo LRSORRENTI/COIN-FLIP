@@ -60,11 +60,13 @@ jQuery(document).ready(function($){
         if(flipResult <= 0.5){
           $('#coin').addClass('heads');
           console.log('it is head');
+          text.style.color = 'transparent'
           text.innerHTML = "itzzz heads"
         }
         else{
           $('#coin').addClass('tails');
           console.log('it is tails');
+          text.style.color = 'transparent'
           text.innerHTML = "itzzz tails"
         }
       }, 100);
