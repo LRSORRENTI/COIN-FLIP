@@ -39,6 +39,7 @@ h1 {
   height: 100px;
   cursor: pointer;
 }
+
 #coin div {
   width: 100%;
   height: 100%;
@@ -51,7 +52,13 @@ h1 {
     0 12px 20px -10px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 0 10px var(--glow-color),
     0 6px 4px -10px var(--glow-color);
+  transition: 0.7s ease-out;
 }
+
+#coin div:hover {
+  box-shadow: inset 0 0 10px #fff, 0 6px 4px -10px #fff;
+}
+
 .side-a {
   /* background-color: #bb0000; */
   /* background-image: url("../imgs/Quarter-Heads.png"); */
@@ -125,11 +132,6 @@ h1 {
     transform: rotateY(1980deg);
   }
 }
-#renderHere {
-  /* color: transparent; */
-  /* border: 1px solid red; */
-  /* padding-top: 40px; */
-}
 
 .btn-container {
   display: flex;
@@ -166,7 +168,8 @@ Flicker button:
   padding-bottom: 10px;
   font-size: 17px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
   -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
   -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
@@ -174,6 +177,12 @@ Flicker button:
   box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
   text-shadow: var(--glow-color) 1px 0px 5px;
+  outline: none;
+  transition: 0.7s ease-out;
+}
+
+.glowing-btn:hover {
+  border: 0.15em solid #fff;
 }
 
 .footerText {
