@@ -1,41 +1,193 @@
-body {
-  background-color: rgb(23, 21, 21);
-  color: white;
-  /* font-family: "Roboto", sans-serif; */
-  font-family: "Cedarville Cursive";
-  font-size: 2rem;
-}
-.header-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  color: purple;
-  padding: 50px;
-}
-.btn-container {
-  display: flex;
-  justify-content: center;
-  padding: 170px 10px 10px 10px;
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: hsl(186 100% 69%);
+  --lime: #cfff04;
 }
 
-button {
-  padding: 20px 20px 20px 20px;
-  border-radius: 90%;
-  background-color: aqua;
+body {
+  padding-top: 50px;
+  background: #181818;
+  -webkit-perspective: 800px;
+  font-family: "Raleway", sans-serif;
 }
-/* .container button {
+h1 {
+  text-align: center;
+  width: 220px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding-left: 4px;
+  padding-bottom: 9px;
+  padding-top: 5px;
+  text-shadow: var(--glow-color) 1px 0px 5px;
+  color: var(--glow-color);
+  letter-spacing: 8px;
+  font-weight: 900;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+}
+#coin {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+#coin div {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 10px var(--glow-color),
+    0 6px 4px -10px var(--glow-color);
+  transition: 0.7s ease-out;
+}
+
+#coin div:hover {
+  box-shadow: inset 0 0 10px #fff, 0 6px 4px -10px #fff;
+}
+
+.side-a {
+  /* background-color: #bb0000; */
+  /* background-image: url("../imgs/Quarter-Heads.png"); */
+  background-size: cover;
+  background-origin: content-box;
+  z-index: 100;
+}
+.side-b {
+  /* background-image: url("../imgs/quarter-us-dollar-isolated-white-background-money-coin-side-eagle-80301214cropped-modified.png"); */
+  background-size: cover;
+  background-origin: content-box;
+  -webkit-transform: rotateY(-180deg);
+}
+
+.coinText {
   display: flex;
   justify-content: center;
-  padding: 10px 10px 10px 10px;
-} */
-@media screen {
-  * {
-    background: silver;
+  align-items: center;
+  padding-top: 1.5rem;
+  color: var(--glow-color);
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-align: center;
+  margin-left: 12px;
+  text-shadow: var(--glow-color) 1px 0px 5px;
+}
+
+#coin {
+  transition: -webkit-transform 1s ease-in;
+  -webkit-transform-style: preserve-3d;
+}
+#coin div {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+
+#coin.heads {
+  -webkit-animation: flipHeads 3s ease-out forwards;
+  -moz-animation: flipHeads 3s ease-out forwards;
+  -o-animation: flipHeads 3s ease-out forwards;
+  animation: flipHeads 3s ease-out forwards;
+}
+#coin.tails {
+  -webkit-animation: flipTails 3s ease-out forwards;
+  -moz-animation: flipTails 3s ease-out forwards;
+  -o-animation: flipTails 3s ease-out forwards;
+  animation: flipTails 3s ease-out forwards;
+}
+
+@-webkit-keyframes flipHeads {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1800deg);
+    -moz-transform: rotateY(1800deg);
+    transform: rotateY(1800deg);
+  }
+}
+@-webkit-keyframes flipTails {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1980deg);
+    -moz-transform: rotateY(1980deg);
+    transform: rotateY(1980deg);
   }
 }
 
-Aqua Shade	Aqua Hex Code	CMYK Aqua Color Code (%)	RGB Aqua Color Code	Aqua Color
-Aqua-Cyan	#00ffff	100, 0, 0, 0	0, 255, 255	 
-Turquoise	#30d5c8	77, 0, 6, 16	48, 213, 200	 
-Aquamarine	#7fffd4	50, 0, 17, 0	127, 255, 212
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnAll {
+  margin: auto;
+  width: 100px;
+  margin-bottom: 12px;
+}
+.btn3 {
+  margin: auto;
+  width: 100px;
+}
+
+/* 
+Flicker button:
+*/
+
+.glowing-btn {
+  margin: auto;
+  text-align: center;
+  color: var(--glow-color);
+  cursor: pointer;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  font-family: "Raleway", sans-serif;
+  width: 200px;
+  letter-spacing: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  text-shadow: var(--glow-color) 1px 0px 5px;
+  outline: none;
+  transition: 0.7s ease-out;
+}
+
+.glowing-btn:hover {
+  border: 0.15em solid #fff;
+}
+
+.footerText {
+  color: var(--glow-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
