@@ -17,6 +17,9 @@ h1 {
   margin: auto;
   margin-bottom: 20px;
   padding-left: 4px;
+  padding-bottom: 9px;
+  padding-top: 5px;
+  text-shadow: var(--glow-color) 1px 0px 5px;
   color: var(--glow-color);
   letter-spacing: 8px;
   font-weight: 900;
@@ -73,6 +76,7 @@ h1 {
   letter-spacing: 10px;
   text-align: center;
   margin-left: 12px;
+  text-shadow: var(--glow-color) 1px 0px 5px;
 }
 
 #coin {
@@ -169,6 +173,7 @@ Flicker button:
     0px 0px 0.5em 0px var(--glow-color);
   box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
+  text-shadow: var(--glow-color) 1px 0px 5px;
 }
 
 .footerText {
