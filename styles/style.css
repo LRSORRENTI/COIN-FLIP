@@ -61,16 +61,27 @@ h1 {
 
 .side-a {
   /* background-color: #bb0000; */
-  /* background-image: url("../imgs/Quarter-Heads.png"); */
-  background-size: cover;
+  background-image: url("../imgs/heads.png");
+  background-size: 133%;
+  background-position: center;
   background-origin: content-box;
-  z-index: 100;
+  padding-left: 2px;
+  padding-top: -2px;
+  padding-bottom: 2px;
+  /* z-index: -1000; */
+  /* padding-right: 10px;
+  padding-bottom: 8px;
+  padding-top: 2px;
+  padding-left: 2px; */
 }
 .side-b {
-  /* background-image: url("../imgs/quarter-us-dollar-isolated-white-background-money-coin-side-eagle-80301214cropped-modified.png"); */
-  background-size: cover;
+  background-image: url("../imgs/tails.png");
+  background-size: 140%;
+  background-position: center;
   background-origin: content-box;
+  padding-top: 8px;
   -webkit-transform: rotateY(-180deg);
+  
 }
 
 .coinText {
