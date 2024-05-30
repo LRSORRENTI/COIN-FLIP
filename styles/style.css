@@ -64,12 +64,14 @@ h1 {
 .side-a {
   /* background-color: #bb0000; */
   background-image: url("../imgs/heads.png");
-  background-size: 133%;
+  background-size: 137%;
   background-position: center;
   background-origin: content-box;
-  padding-left: 2px;
+  padding-right: 5px;
+  padding-top: 6px;
+  /* padding-left: 2px;
   padding-top: -2px;
-  padding-bottom: 2px;
+  padding-bottom: 2px; */
   /* z-index: -1000; */
   /* padding-right: 10px;
   padding-bottom: 8px;
