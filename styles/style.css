@@ -3,6 +3,10 @@
 * {
   position: relative;
   z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }
 
 html,
@@ -82,16 +86,13 @@ h1 {
   background-position: center;
   background-origin: content-box;
   padding-top: 8px;
-  -webkit-transform: rotateY(-180deg);
 }
 
 #coin {
   transition: -webkit-transform 1s ease-in;
-  -webkit-transform-style: preserve-3d;
 }
 #coin div {
   position: absolute;
-  -webkit-backface-visibility: hidden;
 }
 
 #coin.heads {
