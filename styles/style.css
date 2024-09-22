@@ -167,15 +167,13 @@ h1 {
   font-weight: 600;
   margin-bottom: 20px;
   margin-top: 0px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 22px, rgba(0, 0, 0, 0.22) 0px 6px 9px;
   outline: none;
   transition: 0.3s ease-out;
 }
 
 .glowing-btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 9.5px 19px,
-  rgba(0, 0, 0, 0.22) 0px 4px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 9.5px 19px, rgba(0, 0, 0, 0.22) 0px 4px 3px;
   opacity: 80%;
 }
 
