@@ -5,13 +5,52 @@
   --lime: #cfff04;
 }
 
-body {
+/* body {
   padding-top: 50px;
-  background: #181818;
+  background: url("../marble.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-perspective: 800px;
   font-family: "Raleway", sans-serif;
   animation: fadeIn 1.5s ease-in-out;
+
+} */
+html, body {
+  height: 100%; /* Ensure the body takes up the full viewport height */
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  padding-top: 50px;
+  /* background: url("../marble.webp"); */
+  background: linear-gradient(to left, #a8bdbb 10%,  #eee 195%);
+  /* background: linear-gradient( to right #a8bdbb 50% , #FFF 75%); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Raleway", sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* Make sure it covers the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(0, 0, 0, 0.3);  */
+  z-index: -1; /* Ensure it's behind the content but above the background */
+}
+
+* {
+  position: relative;
+  z-index: 2; /* Keep content on top of the mask */
+}
+
 h1 {
   animation: fadeIn 1.5s ease-in-out;
   text-align: center;
@@ -21,18 +60,19 @@ h1 {
   padding-left: 4px;
   padding-bottom: 9px;
   padding-top: 5px;
-  text-shadow: var(--glow-color) 1px 0px 5px;
-  color: var(--glow-color);
+  /* text-shadow: var(--glow-color) 1px 0px 5px; */
+  /* color: var(--glow-color); */
+  color: #a8a8a8;
   letter-spacing: 8px;
   font-weight: 900;
-  border: 0.15em solid var(--glow-color);
+  /* border: 0.15em solid var(--glow-color); */
   border-radius: 15px;
-  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+  /* -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
   -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
   box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
+    0px 0px 0.5em 0px var(--glow-color); */
 }
 #coin {
   position: relative;
@@ -85,7 +125,6 @@ h1 {
   background-origin: content-box;
   padding-top: 8px;
   -webkit-transform: rotateY(-180deg);
-  
 }
 
 /* .coinText {
@@ -171,9 +210,11 @@ Flicker button:
 .glowing-btn {
   margin: auto;
   text-align: center;
-  color: var(--glow-color);
+  /* color: var(--glow-color); */
+  color: #e7e7e7;
   cursor: pointer;
-  border: 0.15em solid var(--glow-color);
+  /* border: 0.15em solid var(--glow-color); */
+  border: none;
   border-radius: 0.45em;
   background: none;
   font-family: "Raleway", sans-serif;
@@ -185,19 +226,20 @@ Flicker button:
   font-weight: 600;
   margin-bottom: 40px;
   margin-top: 20px;
-  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  /* -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
   -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
   box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
-  text-shadow: var(--glow-color) 1px 0px 5px;
+  text-shadow: var(--glow-color) 1px 0px 5px; */
   outline: none;
-  transition: 0.7s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .glowing-btn:hover {
-  border: 0.15em solid #fff;
+  color: #FFF;
 }
 
 .footerText {
@@ -207,11 +249,11 @@ Flicker button:
   margin-top: 100px;
 }
 
-@media(width > 1250px) {
+@media (width > 1250px) {
   h1 {
-    position: absolute;
+    /* position: absolute;
     left: 200px;
-    top: 200px;
+    top: 200px; */
     /* text-align: center; */
     width: 300px;
     /* margin: auto; */
@@ -219,17 +261,84 @@ Flicker button:
     padding-left: 4px;
     padding-bottom: 9px;
     padding-top: 5px;
-    text-shadow: var(--glow-color) 1px 0px 5px;
-    color: var(--glow-color);
+    /* text-shadow: var(--glow-color) 1px 0px 5px; */
+    /* color: var(--glow-color); */
     letter-spacing: 8px;
     font-weight: 900;
     font-size: 60px;
   }
   #game-wrap {
-    position: absolute;
+    /* position: absolute;
     right: 300px;
-    top: 100px;
+    top: 100px; */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    border-radius: 30px;
+    background: linear-gradient(to bottom right, #FFF 5%,  #a8bdbb 55%);
+    box-shadow: rgba(38, 57, 77, 0.5) 50px 30px 100px 25px;
+
   }
+.outer-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+  .inner-wrap1 {
+    display: flex;
+    /* margin: 10px 0; */
+    flex-direction: row;
+    padding-top: 8px;
+    padding-left: 10px;
+    gap: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+  }
+  .inner-wrap2 {
+    display: flex;
+    /* margin: 10px 0; */
+    flex-direction: row;
+    padding-top: 8px;
+    padding-right: 5px;
+    gap: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+
+  }
+  
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2); /* Subtle inset shadow */
+  }
+  
+  /* Apple button styles */
+  .apple-button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), inset 0px 2px 4px rgba(255, 255, 255, 0.25); /* Apple-like look */
+  }
+  
+  .red {
+    background-color: #ff605c; /* Red Apple button */
+  }
+  
+  .yellow {
+    background-color: #ffbd44; /* Yellow Apple button */
+  }
+  
+  .green {
+    background-color: #00ca4e; /* Green Apple button */
+  }
+  
+  /* Dark grey buttons */
+  .grey {
+    background-color: #3a3a3a; /* Dark grey color */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 2px 4px rgba(255, 255, 255, 0.15); /* Slight shadow for grey buttons */
+  }
+  
 
   .glowing-btn {
     width: 300px;
@@ -237,6 +346,5 @@ Flicker button:
     font-size: 30px;
   }
   #coin {
-    
   }
 }
