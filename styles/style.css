@@ -54,8 +54,84 @@ h1 {
   font-weight: 900;
   border-radius: 15px;
 }
-
 #coin {
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  transition: -webkit-transform 1s ease-in;
+  -webkit-transform-style: preserve-3d; /* Preserve 3D effect */
+}
+
+#coin div {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Hide backface during rotation */
+  transition: 0.7s ease-out;
+}
+
+.side-a {
+  background-image: url("../imgs/heads.png");
+  background-size: 137%;
+  background-position: center;
+  background-origin: content-box;
+  padding-left: 2px;
+  padding-right: 5px;
+  padding-top: 6px;
+}
+
+.side-b {
+  background-image: url("../imgs/tails.png");
+  background-size: 140%;
+  background-position: center;
+  background-origin: content-box;
+  padding-top: 8px;
+  -webkit-transform: rotateY(-180deg); /* Initially hide tails side */
+}
+
+#coin.heads .side-a {
+  transform: rotateY(0deg); /* Show heads */
+}
+
+#coin.heads .side-b {
+  transform: rotateY(-180deg); /* Hide tails */
+}
+
+#coin.tails .side-a {
+  transform: rotateY(180deg); /* Hide heads */
+}
+
+#coin.tails .side-b {
+  transform: rotateY(0deg); /* Show tails */
+}
+
+@-webkit-keyframes flipHeads {
+  from {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1800deg);
+    transform: rotateY(1800deg);
+  }
+}
+
+@-webkit-keyframes flipTails {
+  from {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1980deg);
+    transform: rotateY(1980deg);
+  }
+}
+/* #coin {
   position: relative;
   margin: 0 auto;
   width: 250px;
@@ -93,7 +169,7 @@ h1 {
 }
 #coin div {
   position: absolute;
-}
+} */
 
 #coin.heads {
   -webkit-animation: flipHeads 3s ease-out forwards;
