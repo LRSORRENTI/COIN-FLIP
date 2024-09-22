@@ -1,33 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-:root {
-  --glow-color: hsl(186 100% 69%);
-  --lime: #cfff04;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  position: relative;
+  z-index: 2;
 }
 
-/* body {
-  padding-top: 50px;
-  background: url("../marble.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-perspective: 800px;
-  font-family: "Raleway", sans-serif;
-  animation: fadeIn 1.5s ease-in-out;
-
-} */
 html,
 body {
-  height: 100%; /* Ensure the body takes up the full viewport height */
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
   padding-top: 50px;
-  /* background: url("../marble.webp"); */
   background: linear-gradient(to left, #a8bdbb 10%, #eee 195%);
-  /* background: linear-gradient( to right #a8bdbb 50% , #FFF 75%); */
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   font-family: "Oswald", sans-serif;
@@ -38,18 +26,11 @@ body {
 
 body::before {
   content: "";
-  position: fixed; /* Make sure it covers the whole viewport */
-  top: 0;
+  position: fixed;
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* background: rgba(0, 0, 0, 0.3);  */
-  z-index: -1; /* Ensure it's behind the content but above the background */
-}
-
-* {
-  position: relative;
-  z-index: 2; /* Keep content on top of the mask */
+  z-index: -1;
 }
 
 h1 {
@@ -62,23 +43,13 @@ h1 {
   padding-bottom: 9px;
   padding-top: 5px;
   margin-top: 20px;
-  /* text-shadow: var(--glow-color) 1px 0px 5px; */
-  /* color: var(--glow-color); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(90deg, #0e0000, #6ea4a8 50%, #2f0505);
   letter-spacing: 8px;
   font-weight: 900;
-  /* border: 0.15em solid var(--glow-color); */
   border-radius: 15px;
-  /* -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color); */
 }
-
 
 #coin {
   position: relative;
@@ -94,35 +65,16 @@ h1 {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  /* -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
-    0 12px 20px -10px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
-    0 12px 20px -10px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 0 10px var(--glow-color),
-    0 6px 4px -10px var(--glow-color); */
   transition: 0.7s ease-out;
 }
 
-/* #coin div:hover {
-  box-shadow: inset 0 0 10px #fff, 0 6px 4px -10px #fff;
-} */
-
 .side-a {
-  /* background-color: #bb0000; */
   background-image: url("../imgs/heads.png");
   background-size: 137%;
   background-position: center;
   background-origin: content-box;
   padding-right: 5px;
   padding-top: 6px;
-  /* padding-left: 2px;
-  padding-top: -2px;
-  padding-bottom: 2px; */
-  /* z-index: -1000; */
-  /* padding-right: 10px;
-  padding-bottom: 8px;
-  padding-top: 2px;
-  padding-left: 2px; */
 }
 .side-b {
   background-image: url("../imgs/tails.png");
@@ -132,19 +84,6 @@ h1 {
   padding-top: 8px;
   -webkit-transform: rotateY(-180deg);
 }
-
-/* .coinText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1.5rem;
-  color: var(--glow-color);
-  font-weight: 900;
-  letter-spacing: 10px;
-  text-align: center;
-  margin-left: 12px;
-  text-shadow: var(--glow-color) 1px 0px 5px;
-} */
 
 #coin {
   transition: -webkit-transform 1s ease-in;
@@ -209,20 +148,15 @@ h1 {
   width: 100px;
 }
 
-/* 
-Flicker button:
-*/
-
 .glowing-btn {
   margin: auto;
   text-align: center;
-  /* color: var(--glow-color); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #0e0000, #6ea4a8 50%, #2f0505);
+  /* background-image: linear-gradient(120deg, #0e0000, #6ea4a8 2%, #2f0505); */
+  background-image: linear-gradient(90deg, #5f5f5f, #5f5f5f 50%, #5f5f5f);
   cursor: pointer;
-  /* border: 0.15em solid var(--glow-color); */
-  border: none;
+  border: 3px solid #767676;
   border-radius: 0.45em;
   font-family: "Oswald", sans-serif;
   width: 200px;
@@ -235,54 +169,40 @@ Flicker button:
   margin-top: 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  /* -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  text-shadow: var(--glow-color) 1px 0px 5px; */
   outline: none;
   transition: 0.3s ease-out;
 }
 
 .glowing-btn:hover {
-  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 9.5px 19px,
+  rgba(0, 0, 0, 0.22) 0px 4px 3px;
+  opacity: 80%;
 }
 
 .footerText {
+  /* color: #2a2a2a; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(40deg,  #000000, #6ea4a8 1%, #2f0505);
+  background-image: linear-gradient(40deg, #000000, #6ea4a8 1%, #2f0505);
   display: flex;
   justify-content: center;
   margin-top: 50px;
   font-size: 30px;
 }
 
-@media (width > 1250px) {
+@media (width > 150px) {
   h1 {
-    /* position: absolute;
-    left: 200px;
-    top: 200px; */
-    /* text-align: center; */
     width: 300px;
-    /* margin: auto; */
     margin-bottom: 20px;
     padding-left: 4px;
     padding-bottom: 9px;
     padding-top: 5px;
-    /* text-shadow: var(--glow-color) 1px 0px 5px; */
-    /* color: var(--glow-color); */
     letter-spacing: 8px;
     font-weight: 900;
-    font-size: 60px;
+    font-size: 70px;
   }
   #game-wrap {
-    /* position: absolute;
-    right: 300px;
-    top: 100px; */
-    max-width: 600px;
+    max-width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -296,16 +216,17 @@ Flicker button:
     justify-content: space-between;
     border-bottom: 2.4px solid #939393;
     padding-bottom: 10px;
-    margin-left: 2px; 
-    margin-right: 2px; 
+    margin-left: 2px;
+    margin-right: 2px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
 
   .inner-wrap1 {
     display: flex;
-    /* margin: 10px 0; */
     flex-direction: row;
     padding-top: 8px;
     padding-left: 10px;
@@ -315,7 +236,6 @@ Flicker button:
   }
   .inner-wrap2 {
     display: flex;
-    /* margin: 10px 0; */
     flex-direction: row;
     padding-top: 8px;
     padding-right: 10px;
@@ -328,10 +248,9 @@ Flicker button:
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2); 
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2);
   }
 
-  /* Apple button styles */
   .apple-button {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
@@ -339,29 +258,25 @@ Flicker button:
   }
 
   .red {
-    background-color: #ff605c; /* Red Apple button */
+    background-color: #ff605c;
   }
 
   .yellow {
-    background-color: #ffbd44; /* Yellow Apple button */
+    background-color: #ffbd44;
   }
 
   .green {
-    background-color: #00ca4e; /* Green Apple button */
+    background-color: #00ca4e;
   }
 
-  /* Dark grey buttons */
   .grey {
-    background-color: #3a3a3a; /* Dark grey color */
+    background-color: #3a3a3a;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5),
       inset 0px 2px 4px rgba(255, 255, 255, 0.15); /* Slight shadow for grey buttons */
   }
 
   .glowing-btn {
-    width: 300px;
-    /* height:50px; */
+    width: 200px;
     font-size: 30px;
-  }
-  #coin {
   }
 }
